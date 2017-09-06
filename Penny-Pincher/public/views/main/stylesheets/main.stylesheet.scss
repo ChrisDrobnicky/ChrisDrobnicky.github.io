@@ -1,0 +1,172 @@
+@import "../../../stylesheets/variables";
+
+.pp-main {
+  position: relative;
+  .pp-accounts-container {
+    width: 450px;
+    margin: 0 auto;
+    .pp-accounts-container__heading {
+      font-size: 22px;
+      margin: 15px auto;
+      text-align: center;
+    }
+    .pp-account {
+      list-style-type: none;
+      padding: 0;
+      .pp-account__listItem {
+        position: relative;
+        margin: 0;
+        height: 65px;
+        line-height: 65px;
+        font-size: 14px;
+        &:nth-child(even){
+          background-color: #F6F5F8;
+        }
+        .pp-account__name {
+          margin-right: 50px;
+          padding-left: 5px;
+          display: inline-block;
+          width: 200px;
+        }
+        .pp-account__balance {
+          margin-left: 20px;
+        }
+        .pp-account__balance--minus{
+          color: $pink-accent;
+        }
+        .pp-account__balance--plus{
+          color: $teal-accent;
+        }
+        .pp-account__button {
+          position: absolute;
+          right: 10px;
+          top: 20px;
+        }
+      }
+    }
+  }
+
+  .pp-transaction-container {
+    margin: 10px auto;
+    padding-top: 10px;
+    text-align: center;
+    .pp-resetButton {
+      display: block;
+      position: fixed;
+      bottom: 5px;
+      right: 5px;
+    }
+  }
+}
+
+@media only screen and (min-width: $XL) {
+  .pp-main {
+    .pp-accounts-container {
+      width: 500px;
+      .pp-accounts-container__heading {
+        font-size: 24px;
+      }
+      .pp-account {
+        .pp-account__listItem {
+          font-size: 16px;
+          .pp-account__name {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: $L) {
+  .pp-main {
+    .pp-transaction-container {
+      width: 450px;
+      .pp-transaction-container__button--add {
+        float: left;
+        margin: 5px 0 10px 15px;
+      }
+      .pp-resetButton {
+        position: static;
+        float: right;
+        margin: 5px 15px 10px 0;
+        .pp-btn-reset {
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $M) {
+  .pp-main {
+   .pp-accounts-container {
+     width: 360px;
+     .pp-accounts-container__heading {
+       font-size: 18px;
+     }
+     .pp-account {
+       .pp-account__listItem {
+         .pp-account__name {
+           margin: 0;
+           display: block;
+           font-size: 14px;
+           height: 15px;
+           padding-left: 10px;
+         }
+         .pp-account__balance {
+           display: block;
+           font-size: 14px;
+           height: 15px;
+           margin-left: 0;
+           padding-left: 10px;
+         }
+       }
+     }
+   }
+
+   .pp-transaction-container {
+     width: 360px;
+     .pp-transaction-container__button--add {
+       .pp-btn-add {
+         padding: 3px 8px;
+         font-size: 12px;
+       }
+     }
+     .pp-resetButton {
+       .pp-btn-reset {
+         padding: 3px 8px;
+         font-size: 12px;
+       }
+     }
+   }
+ }
+}
+
+@media only screen and (max-width: $S) {
+  .pp-main {
+    .pp-accounts-container {
+      width: auto;
+      .pp-account {
+        .pp-account__listItem {
+          text-align: center;
+          height: 80px;
+          .pp-account__name {
+            width: auto;
+          }
+          .pp-account__balance {
+            width: auto;
+          }
+          .pp-account__button {
+            position: static;
+          }
+        }
+      }
+    }
+
+    .pp-transaction-container {
+      width: auto;
+    }
+  }
+}
+

@@ -1,0 +1,266 @@
+@import "../../../stylesheets/variables";
+
+.pp-accounts-container {
+  width: 470px;
+  margin: 0 auto;
+  .pp-accounts-container__heading {
+    font-size: 16px;
+    margin: 15px auto;
+    text-align: center;
+  }
+  .pp-account-list {
+    list-style-type: none;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    width: 470px;
+    font-size: 14px;
+    .pp-account-list__item {
+      border: 1px solid #F6F5F8;
+      height: 55px;
+      padding: 5px;
+      &:nth-child(even){
+        background-color: #F6F5F8;
+      }
+      &:hover > .pp-account-list__name {
+        margin-left:20px;
+      }
+    }
+    .pp-account-list__name {
+      margin-right: 10px;
+      padding-left: 5px;
+      display: inline-block;
+      width: 270px;
+      line-height: 45px;
+    }
+    .pp-account-list__balance {
+      display: inline-block;
+      width: 90px;
+      margin-right: 10px;
+    }
+    .pp-account-list__button {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      background: $pink-accent;
+      padding: 6px;
+      border: none;
+      color: white;
+      font-size: 15px;
+      .pp-account-list__icon {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.pp-form-container {
+  position: relative;
+  margin: 30px auto;
+  width: 470px;
+  .pp-configure-form {
+    display: block;
+    overflow: hidden;
+    margin-left: 40px;
+    .pp-configure-form__name {
+      float: left;
+      margin-left: 10px;
+    }
+    .pp-configure-form__balance {
+      float: left;
+      margin-left: 10px;
+    }
+    .pp-configure-form__input {
+      color: #222;
+      font-size: 13px;
+    }
+    .pp-configure-form__button {
+      width: 45px;
+      height: 45px;
+      font-size: 15px;
+      position: absolute;
+      right: 35px;
+      bottom: 4px;
+    }
+  }
+}
+
+.pp-alert {
+  margin: 0 auto 10px auto;
+  font-size: 14px;
+  width: 460px;
+}
+
+@media only screen and (min-width: $XL) {
+  .pp-accounts-container {
+    width: 600px;
+    .pp-accounts-container__heading {
+      font-size: 20px;
+    }
+    .pp-account-list {
+      width: 530px;
+      font-size: 16px;
+      .pp-account-list__item {
+      }
+      .pp-account-list__name {
+        width: 300px;
+      }
+      .pp-account-list__balance {
+        width: 120px;
+      }
+      .pp-account-list__button {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .pp-form-container {
+    .pp-configure-form {
+      margin: 0 auto;
+      .pp-configure-form__name {
+      }
+      .pp-configure-form__balance {
+      }
+      .pp-configure-form__input {
+        font-size: 16px;
+      }
+      .pp-configure-form__button {
+        right: 4px;
+        bottom: 2px;
+      }
+    }
+  }
+
+  .pp-alert {
+    width: 520px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: $M) {
+  .pp-accounts-container {
+    width: 360px;
+    .pp-accounts-container__heading {
+    }
+    .pp-account-list {
+      padding: 1px;
+      width: 300px;
+      font-size: 13px;
+      .pp-account-list__item {
+        padding: 2px;
+        position: relative;
+        &:hover > .pp-account-list__name {
+          margin-left:10px;
+        }
+        &:hover > .pp-account-list__balance {
+          margin-left:10px;
+        }
+      }
+      .pp-account-list__name {
+        margin-right: 0;
+        padding-left: 1px;
+        display: block;
+        width: 250px;
+        line-height: 16px;
+      }
+      .pp-account-list__balance {
+        display: inline-block;
+        width: 90px;
+        margin-right: 0;
+      }
+      .pp-account-list__button {
+        position: absolute;
+        right: 3px;
+        bottom: 9px;
+        width: 35px;
+        height: 35px;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .pp-form-container {
+    margin: 5px auto;
+    width: 300px;
+    .pp-configure-form {
+      display: block;
+      margin-left: 40px;
+      .pp-configure-form__name {
+        float: none;
+      }
+      .pp-configure-form__balance {
+        float: none;
+      }
+      .pp-configure-form__input {
+        color: #222;
+        font-size: 12px;
+      }
+      .pp-configure-form__button {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        font-size: 13px;
+        right: 5px;
+        top: 24px;
+      }
+    }
+  }
+
+  .pp-alert {
+    margin: 0 auto 10px auto;
+    font-size: 12px;
+    width: 260px;
+  }
+}
+
+@media only screen and (max-width: $S) {
+  .pp-accounts-container {
+    width: auto;
+    .pp-account-list {
+      padding: 0;
+      width: 245px;
+      font-size: 11px;
+      .pp-account-list__item {
+        height: 45px;
+        padding: 0;
+        &:hover > .pp-account-list__name {
+          margin-left:0;
+        }
+        &:hover > .pp-account-list__balance {
+          margin-left:0;
+        }
+      }
+      .pp-account-list__name {
+        width: 240px;
+        line-height: 14px;
+      }
+      .pp-account-list__balance {
+      }
+      .pp-account-list__button {
+        bottom: 7px;
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .pp-form-container {
+    height: auto;
+    width: 245px;
+    .pp-configure-form {
+      width: auto;
+      .pp-configure-form__button {
+        width: 30px;
+        height: 30px;
+        padding-left: 8px;
+      }
+    }
+  }
+
+  .pp-alert {
+    width: 240px;
+    margin: 0 auto 0 auto;
+    font-size: 11px;
+  }
+}
